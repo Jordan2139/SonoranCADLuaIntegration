@@ -32,10 +32,10 @@ Config.GetPluginConfig = function(pluginName)
 				disableReason = 'Template plugin'
 			}
 		end
-		if not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
-						and not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/config_%s.lua'):format(pluginName, pluginName)) then
+		if not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
+						and not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/config_%s.lua'):format(pluginName, pluginName)) then
 			warnLog(
-							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-plugins/integration-plugins/plugin-installation for steps to properly install.'):format(
+							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-submodules/integration-submodules/plugin-installation for steps to properly install.'):format(
 											pluginName))
 		end
 		Config.plugins[pluginName] = {
@@ -70,10 +70,10 @@ Config.LoadPlugin = function(pluginName, cb)
 				disableReason = 'Template plugin'
 			})
 		end
-		if not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
-						and not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/config_%s.lua'):format(pluginName, pluginName)) then
+		if not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
+						and not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/config_%s.lua'):format(pluginName, pluginName)) then
 			warnLog(
-							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-plugins/integration-plugins/plugin-installation for steps to properly install.'):format(
+							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-submodules/integration-submodules/plugin-installation for steps to properly install.'):format(
 											pluginName))
 		end
 		Config.plugins[pluginName] = {

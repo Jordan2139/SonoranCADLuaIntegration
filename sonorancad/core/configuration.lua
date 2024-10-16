@@ -46,10 +46,10 @@ Config.GetPluginConfig = function(pluginName)
 				disableReason = 'deprecated plugin'
 			}
 		end
-		if not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
-						and not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/config_%s.lua'):format(pluginName, pluginName)) then
+		if not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
+						and not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/config_%s.lua'):format(pluginName, pluginName)) then
 			warnLog(
-							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-plugins/integration-plugins/plugin-installation for steps to properly install.'):format(
+							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-submodules/integration-submodules/plugin-installation for steps to properly install.'):format(
 											pluginName))
 			Config.plugins[pluginName] = {
 				enabled = false,
@@ -90,10 +90,10 @@ Config.LoadPlugin = function(pluginName, cb)
 				disableReason = 'Template plugin'
 			})
 		end
-		if not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
-						and not LoadResourceFile(GetCurrentResourceName(), ('plugins/%s/config_%s.lua'):format(pluginName, pluginName)) then
+		if not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/%s/config_%s.lua'):format(pluginName, pluginName, pluginName))
+						and not LoadResourceFile(GetCurrentResourceName(), ('submodules/%s/config_%s.lua'):format(pluginName, pluginName)) then
 			warnLog(
-							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-plugins/integration-plugins/plugin-installation for steps to properly install.'):format(
+							('Plugin %s is missing critical configuration. Please check our plugin install guide at https://info.sonorancad.com/integration-submodules/integration-submodules/plugin-installation for steps to properly install.'):format(
 											pluginName))
 			Config.plugins[pluginName] = {
 				enabled = false,
@@ -352,8 +352,8 @@ CreateThread(function()
 		warnLog('smartsigns is now a standalone resource. Please update.')
 	end
 	-- smartsigns improper install check
-	if file_exists(('%s/plugins/smartsigns/sv_smartsigns.lua'):format(GetResourcePath(GetCurrentResourceName())))
-					or file_exists(('%s/plugins/smartsigns/smartsigns/sv_smartsigns.lua'):format(GetResourcePath(GetCurrentResourceName()))) then
+	if file_exists(('%s/submodules/smartsigns/sv_smartsigns.lua'):format(GetResourcePath(GetCurrentResourceName())))
+					or file_exists(('%s/submodules/smartsigns/smartsigns/sv_smartsigns.lua'):format(GetResourcePath(GetCurrentResourceName()))) then
 		errorLog('-----------------------')
 		errorLog('Smartsigns incorrect installation detected. This should be installed a standalone resource. If you still have the plugin, you MUST update! You will recieve a parse error in this state.')
 		errorLog('-----------------------')

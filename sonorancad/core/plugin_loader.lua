@@ -9,15 +9,15 @@
 local PluginsWereUpdated = false
 
 local function LoadVersionFile(pluginName)
-    local f = LoadResourceFile(GetCurrentResourceName(), ("plugins/%s/%s/version_%s.json"):format(pluginName, pluginName, pluginName))
+    local f = LoadResourceFile(GetCurrentResourceName(), ("submodules/%s/%s/version_%s.json"):format(pluginName, pluginName, pluginName))
     if f then
         return f
     else
-        f = LoadResourceFile(GetCurrentResourceName(), ("plugins/%s/version_%s.json"):format(pluginName, pluginName)) 
+        f = LoadResourceFile(GetCurrentResourceName(), ("submodules/%s/version_%s.json"):format(pluginName, pluginName))
         if f then
             return f
         else
-            warnLog(("Failed to load version file from either %s or %s. Check to see if the file exists."):format(("plugins/%s/%s/version_%s.json"):format(pluginName, pluginName, pluginName), ("plugins/%s/version_%s.json"):format(pluginName, pluginName)))
+            warnLog(("Failed to load version file from either %s or %s. Check to see if the file exists."):format(("submodules/%s/%s/version_%s.json"):format(pluginName, pluginName, pluginName), ("submodules/%s/version_%s.json"):format(pluginName, pluginName)))
             return nil
         end
     end
@@ -59,12 +59,12 @@ local function downloadPlugin(name, url)
     PerformHttpRequest(releaseUrl, function(code, data, headers)
         debugLog(("downloadPlugin(%s): %s"):format(releaseUrl, code))
         if code == 200 then
-            exports[GetCurrentResourceName()]:CreateFolderIfNotExisting(GetResourcePath(GetCurrentResourceName()).."/pluginupdates/")
-            local savePath = GetResourcePath(GetCurrentResourceName()).."/pluginupdates/"..name..".zip"
+            exports[GetCurrentResourceName()]:CreateFolderIfNotExisting(GetResourcePath(GetCurrentResourceName()).."/submoduleupdates/")
+            local savePath = GetResourcePath(GetCurrentResourceName()).."/submoduleupdates/"..name..".zip"
             local f = assert(io.open(savePath, 'wb'))
             f:write(data)
             f:close()
-            local unzipPath = GetResourcePath(GetCurrentResourceName()).."/plugins/"
+            local unzipPath = GetResourcePath(GetCurrentResourceName()).."/submodules/"
             if exists(("%s/%s/%s/"):format(unzipPath, name, name)) then
                 -- nested, edit unzip path
                 debugLog("Nested plugin detected, adjusting path")
@@ -79,7 +79,7 @@ local function downloadPlugin(name, url)
 end
 
 AddEventHandler("unzipCompleted", function(success, name, savePath, error)
-    if success then 
+    if success then
         infoLog(("Plugin %s successfully downloaded."):format(name))
         os.remove(savePath)
         PluginsWereUpdated = true
@@ -143,7 +143,7 @@ function CheckForPluginUpdate(name, forceUpdate)
                     end
                 end
             end
-            
+
         else
             warnLog(("Failed to check plugin updates for %s: %s %s"):format(name, code, data))
         end
@@ -163,7 +163,7 @@ CreateThread(function()
             Config.plugins[k].disableReason = "Startup aborted"
             goto skip
         end
-        
+
         local vfile = LoadVersionFile(k)
         if vfile == nil then
             goto skip

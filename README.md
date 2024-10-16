@@ -4,7 +4,7 @@ The Sonoran CAD Lua integration framework includes dozens of drag-and-drop integ
 
 ## Installation
 
-Please view the [plugin and framework installation guides](https://info.sonorancad.com/integration-plugins/integration-plugins) for more details.
+Please view the [plugin and framework installation guides](https://info.sonorancad.com/integration-submodules/integration-plugins) for more details.
 
 ## API Resources
 

@@ -3,7 +3,7 @@ The Sonoran CAD plugin framework comes with dozens of drag-and-drop ready integr
 
 ## Installation
 
-All plugins follow a similar installation process. For more information, [click here to see our guides.](https://info.sonorancad.com/integration-plugins/integration-plugins)
+All plugins follow a similar installation process. For more information, [click here to see our guides.](https://info.sonorancad.com/integration-submodules/integration-plugins)
 
 ## Developing
 
