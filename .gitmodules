@@ -1,57 +1,9 @@
-[submodule "sonorancad/submodules/callcommands"]
-	path = sonorancad/submodules/callcommands
-	url = https://github.com/Sonoran-Software/sonoran_callcommands.git
-[submodule "sonorancad/submodules/locations"]
-	path = sonorancad/submodules/locations
-	url = https://github.com/Sonoran-Software/sonoran_locations.git
-[submodule "sonorancad/submodules/lookups"]
-	path = sonorancad/submodules/lookups
-	url = https://github.com/Sonoran-Software/sonoran_lookups.git
-[submodule "sonorancad/submodules/postals"]
-	path = sonorancad/submodules/postals
-	url = https://github.com/Sonoran-Software/sonoran_postals.git
-[submodule "sonorancad/submodules/trafficstop"]
-	path = sonorancad/submodules/trafficstop
-	url = https://github.com/Sonoran-Software/sonoran_trafficstop.git
-[submodule "sonorancad/submodules/unitstatus"]
-	path = sonorancad/submodules/unitstatus
-	url = https://github.com/Sonoran-Software/sonoran_unitstatus.git
-[submodule "sonorancad/submodules/wraithv2"]
-	path = sonorancad/submodules/wraithv2
-	url = https://github.com/Sonoran-Software/sonoran_wraithv2.git
-[submodule "sonorancad/submodules/apicheck"]
-	path = sonorancad/submodules/apicheck
-	url = https://github.com/Sonoran-Software/sonoran_apicheck.git
-[submodule "sonorancad/submodules/livemap"]
-	path = sonorancad/submodules/livemap
-	url = https://github.com/Sonoran-Software/sonoran_livemap.git
-[submodule "sonorancad/submodules/pushevents"]
-	path = sonorancad/submodules/pushevents
-	url = https://github.com/Sonoran-Software/sonoran_pushevents.git
-[submodule "submodules/civintegration"]
-	path = sonorancad/submodules/civintegration
-	url = https://github.com/Sonoran-Software/sonoran_civintegration.git
-[submodule "submodules/forcereg"]
-	path = sonorancad/submodules/forcereg
-	url = https://github.com/Sonoran-Software/sonoran_forcereg.git
-[submodule "submodules/kick"]
-	path = sonorancad/submodules/kick
-	url = https://github.com/Sonoran-Software/sonoran_kick.git
-[submodule "sonorancad/submodules/dispatchnotify"]
-	path = sonorancad/submodules/dispatchnotify
-	url = https://github.com/Sonoran-Software/sonoran_dispatchnotify.git
 [submodule "id_card_ui"]
 	path = id_card_ui
 	url = https://github.com/Sonoran-Software/id_card_ui.git
 [submodule "sonoran_idcard"]
 	path = sonoran_idcard
 	url = https://github.com/Sonoran-Software/id_card_ui.git
-[submodule "sonorancad/submodules/sonrad"]
-	path = sonorancad/submodules/sonrad
-	url = https://github.com/Sonoran-Software/sonoran_sonrad.git
-[submodule "sonorancad/submodules/frameworksupport"]
-	path = sonorancad/submodules/frameworksupport
-	url = https://github.com/Sonoran-Software/sonoran_frameworksupport
 [submodule "wk_wars2x"]
 	path = wk_wars2x
 	url = https://github.com/Sonoran-Software/wk_wars2x.git
